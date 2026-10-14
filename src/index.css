@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar{
+  background-color: #1E1022;
+}
+
+/* Responsive Banner Height */
+.carousel-hero-img {
+  width: 100%;
+  height: clamp(220px, 42vw, 480px); /* 220px on mobile, scales smoothly up to 480px on desktop */
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Ensure corners clip cleanly */
+#carouselExample,
+#carouselExample .carousel-inner {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Styled Floating Toggle Arrows */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 46px;
+  height: 46px;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 16px;
+  opacity: 0.85;
+  transition: all 0.25s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+}
+
+/* Modern pill indicators */
+.carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.6;
+  border: 0;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+  width: 24px;
+  border-radius: 12px;
+  opacity: 1;
+  background-color: #f59e0b; /* Festive golden accent */
+}
